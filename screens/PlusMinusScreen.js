@@ -7,14 +7,9 @@ class PlusMinusScreen extends React.Component {
   state = {
     count: 0
   };
-  static navigationOptions = ({ navigation }) => ({
-    headerStyle: {
-      borderBottomWidth: 0,
-      borderBottomColor: "transparent",
-      elevation: 0,
-      shadowOpacity: 0
-    }
-  });
+  static navigationOptions = {
+    header: null
+  };
   increment = () => {
     this.setState(prevState => {
       return { count: prevState.count + 1 };
@@ -29,7 +24,7 @@ class PlusMinusScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{fontWeight: "600"}}>Count : {this.state.count}</Text>
+        <Text style={{ fontWeight: "600" }}>Count : {this.state.count}</Text>
         <Button text="Increment" color="green" onPress={this.increment} />
         <Button text="Decrement" color="red" onPress={this.decrement} />
       </View>

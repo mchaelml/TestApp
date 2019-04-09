@@ -5,12 +5,7 @@ import Button from "../components/Button";
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    headerStyle: {
-      borderBottomWidth: 0,
-      borderBottomColor: "transparent",
-      elevation: 0,
-      shadowOpacity: 0
-    }
+    header: null
   };
 
   render() {

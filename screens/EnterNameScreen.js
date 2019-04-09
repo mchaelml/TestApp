@@ -8,14 +8,9 @@ class EnterNameScreen extends React.Component {
   state = {
     name: null
   };
-  static navigationOptions = ({ navigation }) => ({
-    headerStyle: {
-      borderBottomWidth: 0,
-      borderBottomColor: "transparent",
-      elevation: 0,
-      shadowOpacity: 0
-    }
-  });
+  static navigationOptions = {
+    header: null
+  };
 
   ChangeInput = val => {
     this.setState({
